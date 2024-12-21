@@ -1,0 +1,4 @@
+all:
+  hosts:
+    cloud-init-host1:
+    cloud-init-host2:

@@ -1,0 +1,13 @@
+---
+- name: Write hostname to file
+  hosts: all
+  become: true
+  tasks:
+    - name: Get the hostname
+      command: hostname
+      register: hostname_output
+
+    - name: Write hostname to /etc/test.txt
+      copy:
+        content: "{{ hostname_output.stdout }}"
+        dest: /etc/test.txt

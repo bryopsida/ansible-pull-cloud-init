@@ -1,0 +1,8 @@
+#cloud-config
+hostname: cloud-init-host1
+
+packages:
+  - ansible
+
+runcmd:
+  - ansible-pull -U https://github.com/bryopsida/ansible-pull-cloud-init -i inventory.yml -l $(hostname) playbook.yml
