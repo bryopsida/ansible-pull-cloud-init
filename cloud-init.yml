@@ -1,6 +1,4 @@
 #cloud-config
-hostname: cloud-init-host1
-
 packages:
   - ansible
 
