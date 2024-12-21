@@ -1,6 +1,6 @@
 ---
 - name: Write hostname to file
-  hosts: localhost
+  hosts: all
   become: true
   tasks:
     - name: Get the hostname

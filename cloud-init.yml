@@ -5,4 +5,4 @@ packages:
   - ansible
 
 runcmd:
-  - ansible-pull -U https://github.com/bryopsida/ansible-pull-cloud-init $(hostname).yml
+  - ansible-pull -U https://github.com/bryopsida/ansible-pull-cloud-init -i $(hostname)/inventory.ini $(hostname)/playbook.yml
